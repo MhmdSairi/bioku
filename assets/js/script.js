@@ -157,3 +157,27 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+
+const copyTrack = {}
+
+function clickCopy(name, text) {
+    copyTrack[name] = (copyTrack[name] ?? 0) + 1
+
+    navigator.clipboard.writeText(text)
+    
+    const tooltip = document.getElementById(`${name}-tooltip`)
+    // let copyMessage = `Copied!`;
+    // if(copyTrack[name] > 1) {
+    //     copyMessage = `Copied! ${copyTrack[name]}x</p><p>${text}</p>`;
+    // }
+    // tooltip.innerHTML = copyMessage
+    tooltip.innerHTML = (copyTrack[name] > 1)
+    ? `Copied! ${copyTrack[name]}x`
+    : `Copied!  `;
+}
+function leaveCopy(name) {
+    const tooltip = document.getElementById(`${name}-tooltip`);
+    tooltip.innerHTML = `<p>Copy to clipboard</p>`;
+    copyTrack[name] = 0
+}

@@ -21,6 +21,7 @@
 $dark-0: #101111;
 $dark-1: #1D1F1F;
 $dark-2: #283030;
+$dark-3: #242e2e;
 
 $cheerio-blue: #6190ff;
 $tairio-blue: #91b2ff;
@@ -195,7 +196,6 @@ article {
     font-size: 16px;
     color: $cheerio-blue;
     box-shadow: $shadow-1;
-    // z-index: 1;
     
     &::before {
         content: "";
@@ -206,6 +206,41 @@ article {
         z-index: -1;
     }
     ion-icon { $ionicon-stroke-width: 35px; }
+
+    .tool-tip-text {
+        visibility: hidden;
+        // width: min-content;
+        text-wrap: nowrap;
+        background-color: $dark-3;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px;
+        position: absolute;
+        z-index: 1;
+        bottom: 150%;
+        left: 0;
+        font-size: 16px;
+
+        // margin-left: -75px;
+        opacity: 0;
+        transition: opacity 0.3s;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: $dark-2 transparent transparent transparent;
+        }
+    }
+    &:hover .tool-tip-text {
+        visibility: visible;
+        opacity: 1;
+    }
+
 }
 
 article {
@@ -396,7 +431,7 @@ main {
 }
 .contact-title {
     color: $light-gray-70;
-    font-size: $fs-1;
+    font-size: $fs-6;
     text-transform: uppercase;
     margin-bottom: 2px;
 }
@@ -1598,10 +1633,10 @@ textarea.form-input {
 
     .contact-info {
         :is(.contact-link) {
-            // white-space: nowrap;
+            white-space: wrap;
             overflow: hidden;
             text-overflow: ellipsis;
-        }
+        } 
         :is(.contact-link, time, address) {
             $fs-7: 14px;
             font-weight: $fw-300;

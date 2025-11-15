@@ -46,43 +46,43 @@
                 <div class="separator"></div>
                 <ul class="contacts-list">
                     <li class="contact-item">
-                        <button class="icon-box">
-                        <!-- <button onclick="clickCopy(`zealantanner@gmail.com`)" class="icon-box"> -->
-                            <ion-icon name="mail-outline"></ion-icon>
+                        <button class="icon-box"
+                            onclick="clickCopy('email', 'zealantanner@gmail.com')"
+                            onmouseleave="leaveCopy('email')">
+                            <!-- <ion-icon name="mail-outline"></ion-icon> -->
+                            <ion-icon name="mail"></ion-icon>
+                            <span class="tool-tip-text" id="email-tooltip">Copy to clipboard</span>
                         </button>
-
                         <div class="contact-info">
                             <p class="contact-title">Email</p>
-                            <a class="contact-link">zealantanner@gmail.com</a>
+                            <!-- <a id="email-text" class="contact-link">zealantanner@gmail.com</a> -->
                         </div>
-
                     </li>
 
                     <li class="contact-item">
-
-                        <button class="icon-box">
-                        <!-- <button onclick="clickCopy(`801 500 3730`)" class="icon-box"> -->
-                            <ion-icon name="phone-portrait-outline"></ion-icon>
+                        <button class="icon-box"
+                            onclick="clickCopy('phone', '801 500 3730')"
+                            onmouseleave="leaveCopy('phone')">
+                            <!-- <ion-icon name="phone-portrait-outline"></ion-icon> -->
+                            <ion-icon name="call"></ion-icon>
+                            <span class="tool-tip-text" id="phone-tooltip">Copy to clipboard</span>
                         </button>
-
                         <div class="contact-info">
-                            <p class="contact-title">Phone</p>
-
-                            <a class="contact-link">801 500 3730</a>
+                            <p class="contact-title">Phone number</p>
+                            <!-- <a id="phone-text" class="contact-link">801 500 3730</a> -->
                         </div>
-
                     </li>
-
+                    
                     <li class="contact-item">
-
-                        <div class="icon-box">
-                            <ion-icon name="calendar-outline"></ion-icon>
-                        </div>
-
+                        <a class="icon-box"
+                            href="https://github.com/zealantanner">
+                            <!-- <ion-icon name="calendar-outline"></ion-icon> -->
+                            <ion-icon name="logo-github"></ion-icon>
+                        </a>
+                        
                         <div class="contact-info">
-                            <p class="contact-title">Birthday</p>
-
-                            <time datetime="1982-06-23">June 23, 1982</time>
+                            <p class="contact-title">Github</p>
+                            
                         </div>
 
                     </li>
