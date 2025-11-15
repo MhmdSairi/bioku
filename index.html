@@ -11,12 +11,13 @@
     <link rel="shortcut icon" href="./assets/images/profile pic.svg" type="image/x-icon">
 
     <!--- custom css link -->
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/scss/style.css">
 
     <!--- google font link -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -37,42 +38,37 @@
 
                 <button class="info_more-btn" data-sidebar-btn>
                     <span>Show Contacts</span>
-
                     <ion-icon name="chevron-down"></ion-icon>
                 </button>
-
             </div>
 
             <div class="sidebar-info_more">
-
                 <div class="separator"></div>
-
                 <ul class="contacts-list">
-
                     <li class="contact-item">
-
-                        <div class="icon-box">
+                        <button class="icon-box">
+                        <!-- <button onclick="clickCopy(`zealantanner@gmail.com`)" class="icon-box"> -->
                             <ion-icon name="mail-outline"></ion-icon>
-                        </div>
+                        </button>
 
                         <div class="contact-info">
                             <p class="contact-title">Email</p>
-
-                            <a href="mailto:richard@example.com" class="contact-link">richard@example.com</a>
+                            <a class="contact-link">zealantanner@gmail.com</a>
                         </div>
 
                     </li>
 
                     <li class="contact-item">
 
-                        <div class="icon-box">
+                        <button class="icon-box">
+                        <!-- <button onclick="clickCopy(`801 500 3730`)" class="icon-box"> -->
                             <ion-icon name="phone-portrait-outline"></ion-icon>
-                        </div>
+                        </button>
 
                         <div class="contact-info">
                             <p class="contact-title">Phone</p>
 
-                            <a href="tel:+12133522795" class="contact-link">+1 (213) 352-2795</a>
+                            <a class="contact-link">801 500 3730</a>
                         </div>
 
                     </li>
@@ -150,7 +146,7 @@
                 <ul class="navbar-list">
 
                     <li class="navbar-item">
-                        <button class="navbar-link  active" data-nav-link>About</button>
+                        <button class="navbar-link active" data-nav-link>About</button>
                     </li>
 
                     <li class="navbar-item">
@@ -168,9 +164,7 @@
                     <li class="navbar-item">
                         <button class="navbar-link" data-nav-link>Contact</button>
                     </li>
-
                 </ul>
-
             </nav>
 
 
